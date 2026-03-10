@@ -72,6 +72,6 @@ class ReportPeriod(Base):
 
     report_files = relationship("ReportFile", back_populates="period")
 
-    @property
+  @property
     def label(self) -> str:
-        MONTHS =
+        return f"{self.month:02d}.{self.year}"
